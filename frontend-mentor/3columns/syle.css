@@ -1,0 +1,83 @@
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --cyan: hsl(184, 100%, 22%);
+  --darkCyan: hsl(179, 100%, 13%);
+
+  --transparentWhite: hsla(0, 0%, 100%, 0.75);
+  --gray: hsl(0, 0%, 95%);
+
+  --parrafo: "Lexend Deca", sans-serif;
+  --titulo: "Big Shoulders Display", cursive;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; /*fragmento del snipet para soucionar el problema con las cajas*/
+  min-height: 100%;
+}
+/*snipet que significa todos los elementos, todos antes y todos despues*/
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-size: 16px;
+  background-color: var(--gray);
+}
+h2 {
+  font-family: var(--titulo);
+  font-weight: 700;
+  color: var(--gray);
+  font-size: 3rem;
+  margin: 3rem 0;
+  padding: 2rem 0;
+}
+p {
+  font-family: var(--parrafo);
+  font-weight: 400;
+  color: var(--transparentWhite);
+  font-size: 2rem;
+  margin: 3rem 0;
+  padding: 2rem 0;
+}
+.contenedor {
+  margin: 0 auto;
+  padding-top: 20rem;
+  max-width: 120rem;
+}
+@media (min-width: 376px) {
+  .cards-contenedor {
+    display: flex;
+  }
+  .cards {
+    flex: 0 0 calc(33.3% - 1rem);
+  }
+}
+.sedan {
+  background-color: var(--orange);
+  padding: 5rem 4rem;
+}
+.suvs {
+  background-color: var(--cyan);
+  padding: 5rem 4rem;
+}
+.luxury {
+  background-color: var(--darkCyan);
+  padding: 5rem 4rem;
+}
+
+.btn {
+  border: 5px solid var(--gray);
+  border-radius: 3rem;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2rem;
+  padding: 1.5rem 3rem;
+  color: var(--gray);
+  margin: 3rem 0;
+}
+.attribution {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 5rem;
+}
